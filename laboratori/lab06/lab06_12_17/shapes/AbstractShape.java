@@ -7,11 +7,14 @@ public abstract class AbstractShape implements Shape {
 	protected static final double defaultSize = 1;
 
 	protected static double requirePositive(double size) {
-	    // to be completed
+	   if(size <= 0)
+			throw new IllegalArgumentException("Inserisci un valore positivo.");
+		return size;
 	}
 
 	protected AbstractShape(Point center) {
-	    // to be completed
+	   // this.center = Point.move(0, 0);
+      center.move(center.getX(), center.getY());
 	}
 
 	protected AbstractShape() {
@@ -19,12 +22,13 @@ public abstract class AbstractShape implements Shape {
 
 	@Override
 	public void move(double dx, double dy) {
-	    // to be completed
+	   // this.center.getX() += dx;
+      center.move(dx,dy);
 	}
 
 	@Override
 	public Point getCenter() {
-	    // to be completed
+	   return this.center;
 	}
 
 }

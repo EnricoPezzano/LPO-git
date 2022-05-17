@@ -18,11 +18,12 @@ public class Rectangle extends AbstractShape {
 	 * Rettangolo con centro sull'origine degli assi
 	 */
 	protected Rectangle(double width, double height) {
-	    // to be completed
+	   setWidthHeight(width, height);
 	}
 
 	protected Rectangle(double width, double height, Point center) {
-	    // to be completed
+	   super(center);
+      setWidthHeight(width, height);
 	}
 
 	/*
@@ -35,29 +36,30 @@ public class Rectangle extends AbstractShape {
 	 * Factory method
 	 */
 	public static Rectangle ofWidthHeight(double width, double height) {
-	    // to be completed
+	   return new Rectangle(width, height);
 	}
 
 	/*
 	 * Factory method
 	 */
 	public static Rectangle ofWidthHeightCenter(double width, double height, Point center) {
-	    // to be completed
+	   return new Rectangle(width, height, center);
 	}
 
 	@Override
 	public void scale(double factor) {
-	    // to be completed
+	   this.height = requirePositive(factor * this.height);
+		this.width = requirePositive(factor * this.width);
 	}
 
 	@Override
 	public double perimeter() {
-	    // to be completed
+	   return 2*(this.height + this.width);
 	}
 
 	@Override
 	public double area() {
-	    // to be completed
+	   return this.height*this.width;
 	}
 
 }

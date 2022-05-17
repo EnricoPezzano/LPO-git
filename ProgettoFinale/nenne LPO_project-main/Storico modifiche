@@ -1,0 +1,31 @@
+NEQ
+- Aggiungo simbolo NEQ a TokenType.java
+- Metto la symbols.put di NEQ per farlo corrispondere a '!=' in BufferedTokenizer.java
+- Aggiungo Neq a AST
+- Aggiungo visitNeq a TypeCheck.java e a visitor.java
+- Aggiungo visitNeq a Eval.java e a visitor.java
+- Modifico parseEq()
+
+RANGE
+- Aggiungo simbolo OPEN_RANGE e CLOSE_RANGE e COLON a TokenType.java
+- Metto i symbols.put di OPEN_RANGE, CLOSE_RANGE e COLON per farlo corrispondere a '[' ':' ']' in BufferedTokenizer.java
+- Creato funzione parseRange() in BufferedParser.java, e aggiunto caso allo switch parseAtom()
+- Creato RangeLit.java nella cartella AST che chiama visiRangeLit
+- aggiungo T visitRangeLit(Exp left, Exp right); a visitors e a typecheck.java
+- creo RangeValue.java e RangeType.java basati su ProdType.java
+
+FOR
+- Aggiungo simboli FOR e IN a TokenType.java
+- Metto la keywords.put di FOR e IN per farlo corrispondere a 'for' e 'in' in BufferedTokenizer.java
+- Creo la funzione parseForStmt() in BufferedParser.java aggiungendo un caso nuovo allo switch di parseStmt()
+- Aggiungo ForStmt a AST
+- Aggiungo visitForStmt a TypeCheck.java e a visitor.java
+- Aggiungo visitForStmt a Eval.java e a visitor.java
+
+BOUNDS
+- Aggiungo simbolo BOUNDS a TokenType.java
+- Metto la keywords.put di BOUNDS per farlo corrispondere a 'bounds' in BufferedTokenizer.java
+- Creo Bounds.java in AST
+- Aggiungo la primitiva di visitBounds() in Visitor.java
+- Implementato visitBounds() in Eval.java e TypeCheck.java
+- Messo funzioni per RangeType in Type.java

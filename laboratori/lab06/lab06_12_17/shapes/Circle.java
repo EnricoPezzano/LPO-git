@@ -13,11 +13,15 @@ public class Circle extends AbstractShape {
 	 * Cerchio con centro sull'origine degli assi
 	 */
 	protected Circle(double radius) {
-	    // to be completed
+	   setRadius(radius);
 	}
 
 	protected Circle(double radius, Point center) {
-	    // to be completed
+	   // this(radius);
+		// super.center.move(center.getX(),center.getY());
+      // soluzione del prof:
+      super(center); // chiamo il costruttore della superclasse
+      setRadius(radius);
 	}
 
 	/*
@@ -30,29 +34,29 @@ public class Circle extends AbstractShape {
 	 * Factory method
 	 */
 	public static Circle ofRadius(double radius) {
-	    // to be completed
+	   return new Circle(radius);
 	}
 
 	/*
 	 * Factory method
 	 */
 	public static Circle ofRadiusCenter(double radius, Point center) {
-	    // to be completed
+	   return new Circle(radius, center);
 	}
 
 	@Override
 	public void scale(double factor) {
-	    // to be completed
+	   this.radius = Circle.requirePositive(factor * this.radius);
 	}
 
 	@Override
 	public double perimeter() {
-	    // to be completed
+	   return 2 * Math.PI * this.radius;
 	}
 
 	@Override
 	public double area() {
-	    // to be completed
+	   return Math.PI * this.radius * this.radius;
 	}
 
 }

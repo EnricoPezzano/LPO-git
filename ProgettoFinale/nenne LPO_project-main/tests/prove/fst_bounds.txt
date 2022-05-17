@@ -1,0 +1,2 @@
+// Stampa 1
+print fst bounds [1:2]
