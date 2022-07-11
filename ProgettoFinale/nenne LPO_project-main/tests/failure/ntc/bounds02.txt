@@ -1,2 +1,0 @@
-// Dynamic error: Expecting a boolean
-print !bounds [1:2]

@@ -1,2 +1,0 @@
-// Static error: Found BOOL, expected INT
-print [1:true]

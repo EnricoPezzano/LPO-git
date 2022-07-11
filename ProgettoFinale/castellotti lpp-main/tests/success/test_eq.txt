@@ -1,8 +1,0 @@
-print 1!=1; // false
-print 1!=2; // true
-print 1!=1+1; // true
-print 1==1; // true
-print 1==2; // false
-print true==true; // true
-print true!= false; // true
-print true!=true // false

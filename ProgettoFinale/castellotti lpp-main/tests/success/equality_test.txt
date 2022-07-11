@@ -1,2 +1,0 @@
-// print ((true == true) != false) && false
-print true == true != false && false // false

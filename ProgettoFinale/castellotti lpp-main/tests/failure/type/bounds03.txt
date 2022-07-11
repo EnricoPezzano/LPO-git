@@ -1,2 +1,0 @@
-// Static error: Found INT, expected BOOL
-print !fst bounds [1:2]

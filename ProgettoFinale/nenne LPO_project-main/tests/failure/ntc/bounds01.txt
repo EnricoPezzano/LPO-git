@@ -1,2 +1,0 @@
-// Dynamic error: Expecting a range
-print bounds 0
